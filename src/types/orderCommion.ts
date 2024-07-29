@@ -13,8 +13,6 @@ export interface OrderCommissionType {
 
 // order commission api response
 export interface OrderCommissionApiResponse extends SuccessResponseType {
-    data : {
-        orders : OrderCommissionType[],
-    },
+    data :  OrderCommissionType[],
 }
 

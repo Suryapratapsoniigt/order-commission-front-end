@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query"
 import OrderCommissionTable from "../../components/OrderCommissionTable/OrderCommissionTable"
 import { getOrderCommission } from "../../api/requests"
-import orders from "../../data/orderCommisson"
 import style from './Home.module.css'
+import { OrderCommissionType } from "../../types/orderCommion"
 
 const Home = () => {
 
@@ -12,7 +12,9 @@ const Home = () => {
     queryFn : () => getOrderCommission(),
   })
 
-  console.log(fetchOrderCommissionQuery, '>>>')
+
+  // get orders
+  const orders: OrderCommissionType[] = fetchOrderCommissionQuery.data ? fetchOrderCommissionQuery.data.data : [];
 
   return (
     <div className={style.container}>

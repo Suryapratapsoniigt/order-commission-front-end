@@ -1,5 +1,6 @@
 import axios from "axios";
 
+console.log(import.meta.env.VITE_APP_BACKEND_URL)
 // create axios instance
 const apiInstance = axios.create({
     baseURL: import.meta.env.VITE_APP_BACKEND_URL,
@@ -8,11 +9,10 @@ const apiInstance = axios.create({
 // Add a response interceptor
 apiInstance.interceptors.response.use(function (response) {
     if(response.status === 200 || response.status === 201){
-      if(response.config.url?.includes("/products/generate-csv")){
-        return response
-      }
+      
       return response.data
     }
+    console.log(response.data, 'data')
     return response;
   }, function (error) {
     

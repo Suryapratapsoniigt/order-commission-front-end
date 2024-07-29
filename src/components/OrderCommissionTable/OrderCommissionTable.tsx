@@ -5,7 +5,7 @@ import { OrderCommissionType } from '../../types/orderCommion';
   
 // props type
 interface PropType {
-    orders : OrderCommissionType [];
+    orders : OrderCommissionType[];
     orderFetching : boolean
     refetch : () => void
 }
