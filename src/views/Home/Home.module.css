@@ -1,0 +1,18 @@
+.container {
+    width: 1200px;
+    margin-inline: auto;
+    margin-block: 5px;
+}
+
+.error {
+    color: rgb(213, 70, 70);
+    font-weight: bold;
+    display: block;
+    padding-block: 5px;
+    padding-inline: 5px;
+    /* border: 1px solid red; */
+    background: rgb(194 121 121 / 22%);
+    border-radius: 5px;
+    margin-block: 10px;
+}
+
