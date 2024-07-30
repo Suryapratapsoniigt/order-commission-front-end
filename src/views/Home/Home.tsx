@@ -14,7 +14,7 @@ const Home = () => {
   const [attributedStaffNameList, setAttributedStaffNameList] = useState<{label : string, value : string}[]>([])
   const [selectedAttributedStaffName, setSelectedAttributedStaffName] = useState<string[] | undefined>()
 
-  const [{month, year}, setDate] = useState({ month: 1, year: 2024  });
+  const [{month, year}, setDate] = useState({ month: new Date().getMonth(), year: new Date().getFullYear()  });
 
   const [selectedDates, setSelectedDates] = useState({
     start: new Date(new Date().setDate(new Date().getDate() - 30)), // Default to 30 days ago
